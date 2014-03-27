@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>LEGOs Are Sexy</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            text-align: center;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            image-orientation: from-image;
+        }
+    </style>
+    <meta http-equiv="refresh" content="3;http://localhost/">
+</head>
+<body>
+<script src="/jquery.min.js"></script>
+<script type="text/javascript">
+    jQuery.getJSON('/data.json', function( data ) {
+        // Pick a random item
+        var item = data[Math.floor(Math.random()*data.length)];
+        $('#image').append('<img height="100%" id="LEGO" src="'+item+'">');
+    });
+
+</script>
+<div id="image"></div>
+</body>
+</html>
