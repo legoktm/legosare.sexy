@@ -18,18 +18,9 @@
             image-orientation: from-image;
         }
     </style>
-    <meta http-equiv="refresh" content="8;http://legosare.sexy/">
+    <meta http-equiv="refresh" content="8;/">
 </head>
 <body>
-<script src="/jquery.min.js"></script>
-<script type="text/javascript">
-    jQuery.getJSON('/data.json', function( data ) {
-        // Pick a random item
-        var item = data[Math.floor(Math.random()*data.length)];
-        $('#image').append('<a href="/"><img height="100%" id="LEGO" src="'+item+'"></a>');
-    });
-
-</script>
-<div id="image"></div>
+<div id="image"><a href="/"><img height="100%" id="LEGO" src="{{ img_src }}"></a></div>
 </body>
 </html>
